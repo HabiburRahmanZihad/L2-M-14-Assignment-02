@@ -17,8 +17,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.16.3",
-    "serverless-http": "^4.0.0",
-    "vercel": "^25.2.0"
+    "vercel": "^49.1.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
