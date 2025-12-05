@@ -15,6 +15,11 @@ app.use(express.json());
 // Initialize the database and create tables if they don't exist (non-blocking)
 initDb().catch(err => console.error('Database initialization error:', err));
 
+// Health Check Endpoint (fast response)
+app.get('/health', (req: Request, res: Response) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() })
+})
+
 // Root Endpoint
 app.get('/', logger, (req: Request, res: Response) => {
   res.send('Wow😲Vehicle Rental System Surver is running!')
