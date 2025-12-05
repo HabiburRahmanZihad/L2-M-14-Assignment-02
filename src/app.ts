@@ -12,8 +12,8 @@ const app = express()
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Initialize the database and create tables if they don't exist
-initDb();
+// Initialize the database and create tables if they don't exist (non-blocking)
+initDb().catch(err => console.error('Database initialization error:', err));
 
 // Root Endpoint
 app.get('/', logger, (req: Request, res: Response) => {

@@ -126,8 +126,6 @@ CREATE TABLE users (
   password TEXT NOT NULL,
   phone VARCHAR(15) NOT NULL,
   role VARCHAR(50) NOT NULL DEFAULT 'customer',
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
 );
 ```
 
@@ -140,8 +138,6 @@ CREATE TABLE vehicles (
   registration_number VARCHAR(50) NOT NULL UNIQUE,
   daily_rent_price DECIMAL(10, 2) NOT NULL,
   availability_status VARCHAR(50) NOT NULL DEFAULT 'available',
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
 );
 ```
 
@@ -155,8 +151,6 @@ CREATE TABLE bookings (
   rent_end_date DATE NOT NULL,
   total_price DECIMAL(10, 2) NOT NULL,
   status VARCHAR(50) NOT NULL DEFAULT 'active',
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
 );
 ```
 
@@ -519,4 +513,4 @@ This project is for educational purposes.
 
 **Version:** 1.0.0
 **Status:** Production Ready ✅
-**Last Updated:** December 5, 2024
+**Last Updated:** December 6, 2025
