@@ -444,9 +444,6 @@ number_of_days = (rent_end_date - rent_start_date)
 
 For detailed API specifications, see:
 - **[API Reference](API_REFERENCE.md)** - Complete endpoint documentation
-- **[Quick Start Guide](QUICK_START.md)** - Setup and testing
-- **[Implementation Summary](IMPLEMENTATION_SUMMARY.md)** - Feature details
-- **[Completion Report](COMPLETION_REPORT.md)** - Project statistics
 
 ---
 
@@ -500,8 +497,7 @@ curl -X POST http://localhost:8080/api/v1/auth/signin \
 
 For issues or questions:
 1. Check [API Reference](API_REFERENCE.md)
-2. Review [Quick Start Guide](QUICK_START.md)
-3. See troubleshooting section above
+2. See troubleshooting section above
 
 ---
 
