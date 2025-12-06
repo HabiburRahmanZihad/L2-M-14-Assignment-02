@@ -2,7 +2,7 @@
 
 > A professional, production-ready backend API for managing vehicle rentals with complete authentication, role-based access control, and comprehensive booking management.
 
-**Live URL:** `https://l2-m-14-assignment-02.vercel.app/api/v1/` (after setup)
+**Live URL:** `https://vehicle-l2-a2-server.vercel.app/api/v1/`
 
 ---
 

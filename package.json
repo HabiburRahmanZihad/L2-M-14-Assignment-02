@@ -1,5 +1,5 @@
 {
-  "name": "assignment-2-server",
+  "name": "vehicle-l2-a2-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,7 +23,7 @@
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/pg": "^8.15.6",
-    "@vercel/node": "^2.3.0",
+    "@vercel/node": "^5.5.15",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }

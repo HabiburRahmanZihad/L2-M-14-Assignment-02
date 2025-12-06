@@ -31,7 +31,7 @@ const initDb = async () => {
       type VARCHAR(50) NOT NULL,
       registration_number VARCHAR(50) NOT NULL UNIQUE,
       daily_rent_price DECIMAL(10, 2) NOT NULL,
-        availability_status VARCHAR(50) NOT NULL DEFAULT 'available'
+      availability_status VARCHAR(50) NOT NULL DEFAULT 'available'
     )
   `);
 
