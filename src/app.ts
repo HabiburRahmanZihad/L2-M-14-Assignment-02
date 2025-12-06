@@ -22,7 +22,10 @@ app.get('/health', (req: Request, res: Response) => {
 
 // Root Endpoint
 app.get('/', logger, (req: Request, res: Response) => {
-  res.send('Wow😲Vehicle Rental System Surver is running!')
+  res.send('Wow😲Vehicle Rental System Server is running!')
+})
+app.get('/api/v1', logger, (req: Request, res: Response) => {
+  res.send('Wow😲Vehicle Rental System Server is running!')
 })
 
 // Authentication Routes
