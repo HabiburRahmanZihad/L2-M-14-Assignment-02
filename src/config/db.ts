@@ -1,6 +1,5 @@
-import { Pool } from "pg";
-import config from ".";
-
+import { Pool } from 'pg';
+import config from '.';
 
 // PostgreSQL connection setup - NeonDB
 export const pool = new Pool({
@@ -8,7 +7,6 @@ export const pool = new Pool({
 });
 
 const initDb = async () => {
-
   // Users table
   await pool.query(`
     CREATE TABLE IF NOT EXISTS users (
@@ -17,11 +15,14 @@ const initDb = async () => {
       email VARCHAR(150) NOT NULL UNIQUE,
       password TEXT NOT NULL,
       phone VARCHAR(15) NOT NULL,
-      role VARCHAR(50) NOT NULL DEFAULT 'customer'
+      role VARCHAR(50) NOT NULL DEFAULT 'customer',
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
   `);
 
-  console.log("Database initialized and 'users' table created (if not exists).");
+  console.log(
+    "Database initialized and 'users' table created (if not exists)."
+  );
 
   // Vehicles table
   await pool.query(`
@@ -31,7 +32,8 @@ const initDb = async () => {
       type VARCHAR(50) NOT NULL,
       registration_number VARCHAR(50) NOT NULL UNIQUE,
       daily_rent_price DECIMAL(10, 2) NOT NULL,
-      availability_status VARCHAR(50) NOT NULL DEFAULT 'available'
+      availability_status VARCHAR(50) NOT NULL DEFAULT 'available',
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
   `);
 
@@ -46,7 +48,8 @@ const initDb = async () => {
       rent_start_date DATE NOT NULL,
       rent_end_date DATE NOT NULL,
       total_price DECIMAL(10, 2) NOT NULL,
-      status VARCHAR(50) NOT NULL DEFAULT 'active'
+      status VARCHAR(50) NOT NULL DEFAULT 'active',
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
   `);
 
